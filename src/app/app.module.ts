@@ -11,6 +11,7 @@ import { ListUsuariosComponent } from './dashboard/list-usuarios/list-usuarios.c
 import { LayoutComponent } from './layout/layout.component';
 import { CardUsuariosComponent } from './dashboard/list-usuarios/card-usuarios/card-usuarios.component';
 import { UsuarioInterceptor } from './interceptor/usuario.interceptor';
+import { UsuarioComponent } from './dashboard/usuario/usuario.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { UsuarioInterceptor } from './interceptor/usuario.interceptor';
     NavbarComponent,
     ListUsuariosComponent,
     LayoutComponent,
-    CardUsuariosComponent
+    CardUsuariosComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,
