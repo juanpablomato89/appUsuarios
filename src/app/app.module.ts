@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import { NavbarComponent } from './dashboard/navbar/navbar.component';
 import { ListUsuariosComponent } from './dashboard/list-usuarios/list-usuarios.component';
 import { LayoutComponent } from './layout/layout.component';
 import { CardUsuariosComponent } from './dashboard/list-usuarios/card-usuarios/card-usuarios.component';
+import { UsuarioInterceptor } from './interceptor/usuario.interceptor';
 
 @NgModule({
   declarations: [
@@ -22,9 +24,16 @@ import { CardUsuariosComponent } from './dashboard/list-usuarios/card-usuarios/c
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: UsuarioInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
