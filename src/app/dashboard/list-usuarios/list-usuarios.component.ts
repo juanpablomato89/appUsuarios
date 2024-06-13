@@ -10,7 +10,7 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 export class ListUsuariosComponent implements OnInit {
 
   listUsuarios: Usuario[] = [];
-  loanding = true;
+  loading = true;
   constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit(): void {
@@ -20,10 +20,10 @@ export class ListUsuariosComponent implements OnInit {
   getUsuarios() {
     this.usuarioService.getUsuarios().subscribe(data => {
       this.listUsuarios = data;
-      this.loanding = false
+      this.loading = false
 
     }, error => {
-      this.loanding = false
+      this.loading = false
       console.error(error);
     })
 

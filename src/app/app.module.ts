@@ -12,6 +12,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { CardUsuariosComponent } from './dashboard/list-usuarios/card-usuarios/card-usuarios.component';
 import { UsuarioInterceptor } from './interceptor/usuario.interceptor';
 import { UsuarioComponent } from './dashboard/usuario/usuario.component';
+import { LoadingComponent } from './dashboard/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { UsuarioComponent } from './dashboard/usuario/usuario.component';
     ListUsuariosComponent,
     LayoutComponent,
     CardUsuariosComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
