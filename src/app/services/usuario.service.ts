@@ -14,4 +14,8 @@ export class UsuarioService {
   getUsuarios(): Observable<Usuario[]> {
     return this.http.get<Usuario[]>(environment.urlUsuario, { observe: 'body' });
   }
+
+  getUsuario(id: string): Observable<Usuario> {
+    return this.http.get<Usuario>(environment.urlUsuario + '/' + id, { observe: 'body' });
+  }
 }
