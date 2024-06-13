@@ -1,0 +1,32 @@
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  color: #cdd0d4;
+}
+hr {
+  border-color: #f05f44;
+  border-width: 5px;
+  max-width: 65px;
+  width: 100px;
+  margin: auto;
+}
+
+.layout {
+  background: url(../../assets/img/img.jpg) no-repeat center center fixed;
+  height: 100vh;
+  background-size: cover;
+}
+
+.btn-xl {
+  background-color: #f05f44;
+  border-color: #f05f44;
+  padding: 1rem 2rem;
+  margin-top: 15px;
+  border-radius: 300px;
+}
+
+.btn-xl:hover {
+  background-color: #ee4b08;
+  border-width: 4px;
+  border-color: #ee4b08;
+}
